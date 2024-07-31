@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Kalkulator Persentase</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            margin-top: 25px;
+            padding-bottom: 80px;
+        }
+        footer {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #efecec;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            font-family: 'Courier New', monospace;
+            color: #0f0f0f;
+            margin: 0;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 25px;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 25px;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu:hover .dropdown-menu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+            display: contents;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-control {
+            width: auto;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+        .result {
+            margin-top: 1rem;
+            color: red;
+        }
+
+        .dropdown-item{
+            padding-left: 10px ;
+            transition: 0.2s;
+            
+        }
+
+        .dropdown-item:hover {
+            padding-left: 20px; /* Padding kiri saat dihover */
+            background-color: #ffa006; /* Hijau muda */
+            
+        }
+
+
+
+
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" style="font-size: 26px; margin-right: 100px; margin-left: 60px;" href="open.html">MultiCalcPro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Daftar menu navigasi -->
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px" href="suhu.html">Suhu</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="satuanberat.html">Satuan Massa</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="satuanpanjang.html">Satuan Panjang</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Luas dan Keliling
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" style="font-size: 12px;" href="persegi.html">Persegi</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="persegipanjang.html">Persegi Panjang</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="segitiga.html">Segitiga</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="lingkaran.html">Lingkaran</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="belahketupat.html">Belah Ketupat</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="jajargenjang.html">Jajar Genjang</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="trapesium.html">Trapesium</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="layanglayang.html">Layang-Layang</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Volume dan Luas Permukaan
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" style="font-size: 12px;" href="kubus.html">Kubus</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="balok.html">Balok</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="kerucut.html">Kerucut</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="bola.html">Bola</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="tabung.html">Tabung</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Prisma</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segitiga.html">Prisma Segitiga</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segiempat.html">Prisma Segiempat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segilima.html">Prisma Segilima</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Limas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segitiga.html">Limas Segitiga</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segiempat.html">Limas Segiempat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segilima.html">Limas Segilima</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segienam.html">Limas Segienam</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdownMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+                        <a class="dropdown-item active nav-link" style="font-size: 12px;" href="persen.html">Persentase</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="pecahan.html">Pecahan</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="waktu.html">Satuan Waktu</a>
+                        
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Aritmatika Sosial</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="hargabeli.html">Harga Beli</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="Hargajual.html">Harga Jual</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="laba.html">Laba Keuntungan</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="Rugi.html">Rugi</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="diskon.html">Diskon Rabat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="pajak.html">Pajak</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="bruto.html">Bruto, Netto dan Tara</a>
+                                <!-- <a class="dropdown-item" style="font-size: 12px;" href="prisma-segienam.html">Prisma Segienam</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Kalkulator Persentase</h1>
+
+        <!-- Persentase dari angka -->
+        <div class="form-group">
+            <label for="percentage1">Hitung persentase:</label>
+            <input type="number" id="percentage1" class="form-control my-3" placeholder="%" oninput="calculatePercentage1()">
+            <span>x</span>
+            <input type="number" id="number1" class="form-control my-3" placeholder="Angka" oninput="calculatePercentage1()">
+            <button class="btn btn-secondary" onclick="resetPercentage1()">Reset</button>
+        </div>
+        <div class="result" id="result1"></div>
+
+        <!-- Berapa persen dari angka
+        <div class="form-group my-3">
+            <label for="number2">Berapa persen dari:</label>
+            <input type="number" id="number2" class="form-control my-3" placeholder="Angka" oninput="calculatePercentage2()">
+            <span>adalah</span>
+            <input type="number" id="percentage2" class="form-control" placeholder="%" oninput="calculatePercentage2()">
+            <button class="btn btn-secondary" onclick="resetPercentage2()">Reset</button>
+        </div>
+        <div class="result" id="result2"></div> -->
+
+        <!-- Persentase dari dua angka -->
+        <div class="form-group my-3">
+            <label for="number3">Hitung:</label>
+            <input type="number" id="number3" class="form-control my-3" placeholder="Angka 1" oninput="calculatePercentage3()">
+            <span>adalah</span>
+            <input type="number" id="percentage3" class="form-control my-3" placeholder="%" oninput="calculatePercentage3()">
+            <span>dari</span>
+            <input type="number" id="number4" class="form-control" placeholder="Angka 2" oninput="calculatePercentage3()">
+            <button class="btn btn-secondary" onclick="resetPercentage3()">Reset</button>
+        </div>
+        <div class="result" id="result3"></div>
+
+        <!-- Perubahan persentase -->
+        <div class="form-group my-3">
+            <label for="number5">Perubahan persentase:</label>
+            <input type="number" id="number5" class="form-control my-3" placeholder="Angka Awal" oninput="calculatePercentage4()">
+            <span>ke</span>
+            <input type="number" id="number6" class="form-control" placeholder="Angka Akhir" oninput="calculatePercentage4()">
+            <button class="btn btn-secondary" onclick="resetPercentage4()">Reset</button>
+        </div>
+        <div class="result" id="result4"></div>
+    </div>
+
+    <footer class="text-center">
+        <p>Copyright © 2024 MultiCalcPro by AwinataX. All Rights Reserved</p>
+    </footer>
+
+    <!-- Menyertakan skrip JavaScript Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Fungsi untuk menghitung persentase dari angka
+        function calculatePercentage1() {
+            const percentage = parseFloat(document.getElementById('percentage1').value);
+            const number = parseFloat(document.getElementById('number1').value);
+            if (!isNaN(percentage) && !isNaN(number)) {
+                const result = (percentage / 100) * number;
+                document.getElementById('result1').textContent = `Hasil: (${percentage} / 100) x ${number} = ${result.toFixed(2)}`;
+            } else {
+                document.getElementById('result1').textContent = '';
+            }
+        }
+
+        // Fungsi untuk mereset input dan hasil untuk persentase dari angka
+        function resetPercentage1() {
+            document.getElementById('percentage1').value = '';
+            document.getElementById('number1').value = '';
+            document.getElementById('result1').textContent = '';
+        }
+
+        // Fungsi untuk menghitung berapa persen dari angka
+        function calculatePercentage2() {
+            const number = parseFloat(document.getElementById('number2').value);
+            const percentage = parseFloat(document.getElementById('percentage2').value);
+            if (!isNaN(number) && !isNaN(percentage)) {
+                const result = (percentage / 100) * number;
+                document.getElementById('result2').textContent = `Hasil: ${result.toFixed(2)}`;
+            } else {
+                document.getElementById('result2').textContent = '';
+            }
+        }
+
+        // Fungsi untuk mereset input dan hasil untuk perhitungan persentase
+        function resetPercentage2() {
+            document.getElementById('number2').value = '';
+            document.getElementById('percentage2').value = '';
+            document.getElementById('result2').textContent = '';
+        }
+
+        // Fungsi untuk menghitung persentase dari dua angka
+        function calculatePercentage3() {
+            const number1 = parseFloat(document.getElementById('number3').value);
+            const percentage = parseFloat(document.getElementById('percentage3').value);
+            const number2 = parseFloat(document.getElementById('number4').value);
+            if (!isNaN(number1) && !isNaN(percentage) && !isNaN(number2)) {
+                const result = (percentage / 100) * number2;
+                document.getElementById('result3').textContent = `${number1} adalah ${percentage}% dari ${number2}. Hasil: ${result.toFixed(2)}`;
+            } else {
+                document.getElementById('result3').textContent = '';
+            }
+        }
+
+        // Fungsi untuk mereset input dan hasil untuk perhitungan persentase dari dua angka
+        function resetPercentage3() {
+            document.getElementById('number3').value = '';
+            document.getElementById('percentage3').value = '';
+            document.getElementById('number4').value = '';
+            document.getElementById('result3').textContent = '';
+        }
+
+        // Fungsi untuk menghitung perubahan persentase antara dua angka
+        function calculatePercentage4() {
+            const number5 = parseFloat(document.getElementById('number5').value);
+            const number6 = parseFloat(document.getElementById('number6').value);
+            if (!isNaN(number5) && !isNaN(number6)) {
+                const result = ((number6 - number5) / number5) * 100;
+                document.getElementById('result4').textContent = `Perubahan persentase dari ${number5} ke ${number6} adalah ${result.toFixed(2)}%`;
+            } else {
+                document.getElementById('result4').textContent = '';
+            }
+        }
+
+        // Fungsi untuk mereset input dan hasil untuk perhitungan perubahan persentase
+        function resetPercentage4() {
+            document.getElementById('number5').value = '';
+            document.getElementById('number6').value = '';
+            document.getElementById('result4').textContent = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Kalkulator Pajak</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            margin-top: 25px;
+        }
+        footer {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #efecec;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            font-family: 'Courier New', monospace;
+            color: #0f0f0f;
+            margin: 0;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 25px;
+        }
+        #output {
+            white-space: pre-wrap;
+            font-size: 12px;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+        .dropdown-submenu:hover .dropdown-menu {
+            display: contents;
+        }
+        .dropdown-item {
+            padding-left: 10px;
+            transition: 0.2s;
+        }
+        .dropdown-item:hover {
+            padding-left: 20px;
+            background-color: #ffa006;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" style="font-size: 26px;  margin-right: 100px; margin-left:60px" href="open.html">MultiCalcPro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px" href="suhu.html">Suhu</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="satuanberat.html">Satuan Massa</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="satuanpanjang.html">Satuan Panjang</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Luas dan Keliling
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" style="font-size: 12px;" href="persegi.html">Persegi</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="persegipanjang.html">Persegi Panjang</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="segitiga.html">Segitiga</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="lingkaran.html">Lingkaran</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="belahketupat.html">Belah Ketupat</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="jajargenjang.html">Jajar Genjang</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="trapesium.html">Trapesium</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="layanglayang.html">Layang-Layang</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Volume dan Luas Permukaan
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" style="font-size: 12px;" href="kubus.html">Kubus</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="balok.html">Balok</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="kerucut.html">Kerucut</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="bola.html">Bola</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="tabung.html">Tabung</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Prisma</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segitiga.html">Prisma Segitiga</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segiempat.html">Prisma Segiempat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segilima.html">Prisma Segilima</a>
+                                <!-- <a class="dropdown-item" style="font-size: 12px;" href="prisma-segienam.html">Prisma Segienam</a> -->
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Limas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segitiga.html">Limas Segitiga</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segiempat.html">Prisma Segiempat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segilima.html">Prisma Segilima</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segienam.html">Prisma Segienam</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdownMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+                        <a class="dropdown-item" style="font-size: 12px;" href="persen.html">Persentase</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="pecahan.html">Pecahan</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="waktu.html">Satuan Waktu</a>
+                        
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Aritmatika Sosial</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="hargabeli.html">Harga Beli</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="Hargajual.html">Harga Jual</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="laba.html">Laba Keuntungan</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="Rugi.html">Rugi</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="diskon.html">Diskon Rabat</a>
+                                <a class="dropdown-item active nav-link" style="font-size: 12px;" href="pajak.html">Pajak</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="bruto.html">Bruto, Netto dan Tara</a>
+                                <!-- <a class="dropdown-item" style="font-size: 12px;" href="prisma-segienam.html">Prisma Segienam</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Kalkulator Pajak</h1>
+        <div class="form-group">
+            <input type="number" id="harga" class="form-control my-3" placeholder="Harga Barang">
+        </div>
+        <div class="form-group">
+            <input type="number" id="persenPajak" class="form-control my-3" placeholder="Persentase Pajak (%)">
+        </div>
+        <button class="btn btn-primary" onclick="calculateTax()">Hitung</button>
+        
+        <h2 class="mt-4">Hasil:</h2>
+        <p id="output"></p>
+    </div>
+
+    <footer class="text-center">
+        <p>Copyright © 2024 MultiCalcPro by AwinataX. All Rights Reserved</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function calculateTax() {
+            const harga = parseFloat(document.getElementById('harga').value);
+            const persenPajak = parseFloat(document.getElementById('persenPajak').value);
+            let result = "";
+
+            if (isNaN(harga) || isNaN(persenPajak) || harga <= 0 || persenPajak < 0) {
+                document.getElementById('output').innerText = "Masukkan nilai yang valid!";
+                return;
+            }
+
+            const pajak = harga * (persenPajak / 100);
+            const hargaSetelahPajak = harga + pajak;
+
+            result = `Harga Barang = Rp ${harga}
+            \nPersentase Pajak = ${persenPajak}%
+            \n\nPajak = Harga Barang x (Persentase Pajak / 100)
+            \n= Rp ${harga} x (${persenPajak} / 100)
+            \n= Rp ${pajak.toFixed(2)}
+            \n\nHarga Setelah Pajak = Harga Barang + Pajak
+            \n= Rp ${harga} + Rp ${pajak.toFixed(2)}
+            \n= Rp ${hargaSetelahPajak.toFixed(2)}`;
+
+            document.getElementById('output').innerText = result;
+        }
+    </script>
+</body>
+</html>

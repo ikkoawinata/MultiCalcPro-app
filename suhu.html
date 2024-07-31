@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Kalkulator MultiCalcPro</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+            margin-top: 25px;
+        }
+        footer {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #efecec;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            font-family: 'Courier New', monospace;
+            color: #0f0f0f;
+            margin: 0;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 25px;
+        }
+        .dropdown-submenu {
+            position: relative;
+        }
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            display: none;
+        }
+
+        .dropdown-submenu:hover .dropdown-menu {
+            display: contents; /* Menampilkan submenu ketika hover */
+        }
+
+        .dropdown-item{
+            padding-left: 10px ;
+            transition: 0.2s;
+            
+        }
+
+        .dropdown-item:hover {
+            padding-left: 20px; /* Padding kiri saat dihover */
+            background-color: #ffa006; /* Hijau muda */
+            
+        }
+
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" style="font-size: 26px;  margin-right: 100px; margin-left:60px" href="open.html">MultiCalcPro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" style="font-size: 12px" href="suhu.html">Suhu</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px" href="satuanberat.html">Satuan Massa</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 12px" href="satuanpanjang.html">Satuan Panjang</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Luas dan Keliling
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" style="font-size: 12px;" href="persegi.html">Persegi</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="persegipanjang.html">Persegi Panjang</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="segitiga.html">Segitiga</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="lingkaran.html">Lingkaran</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="belahketupat.html">Belah Ketupat</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="jajargenjang.html">Jajar Genjang</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="trapesium.html">Trapesium</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="layanglayang.html">Layang-Layang</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Volume dan Luas Permukaan
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" style="font-size: 12px;" href="kubus.html">Kubus</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="balok.html">Balok</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="kerucut.html">Kerucut</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="bola.html">Bola</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="tabung.html">Tabung</a>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Prisma</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segitiga.html">Prisma Segitiga</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segiempat.html">Prisma Segiempat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="prisma-segilima.html">Prisma Segilima</a>
+                                <!-- <a class="dropdown-item" style="font-size: 12px;" href="prisma-segienam.html">Prisma Segienam</a> -->
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Limas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segitiga.html">Limas Segitiga</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segiempat.html">Limas Segiempat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="limas-segilima.html">Limas Segilima</a>
+                                <!-- <a class="dropdown-item" style="font-size: 12px;" href="limas-segienam.html">Limas Segienam</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="font-size: 12px;" href="#" id="navbarDropdownMore" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMore">
+                        <a class="dropdown-item" style="font-size: 12px;" href="persen.html">Persentase</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="pecahan.html">Pecahan</a>
+                        <a class="dropdown-item" style="font-size: 12px;" href="waktu.html">Satuan Waktu</a>
+                        
+                        <div class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" style="font-size: 12px;" href="#">Aritmatika Sosial</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" style="font-size: 12px;" href="hargabeli.html">Harga Beli</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="Hargajual.html">Harga Jual</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="laba.html">Laba Keuntungan</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="Rugi.html">Rugi</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="diskon.html">Diskon Rabat</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="pajak.html">Pajak</a>
+                                <a class="dropdown-item" style="font-size: 12px;" href="bruto.html">Bruto, Netto dan Tara</a>
+                                <!-- <a class="dropdown-item" style="font-size: 12px;" href="prisma-segienam.html">Prisma Segienam</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Kalkulator Suhu</h1>
+        <input type="number" id="inputValue" class="form-control my-3" placeholder="Masukkan nilai suhu">
+        <select id="inputUnit" class="form-control mb-3">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+            <option value="Reamur">Reamur</option>
+        </select>
+        <button class="btn btn-primary" onclick="convertTemperature()">Hitung</button>
+        
+        <h2 class="mt-4">Hasil:</h2>
+        <p id="output" style="font-size: 12px"></p>
+    </div>
+
+    <footer class="text-center">
+        <p>Copyright © 2024 MultiCalcPro by AwinataX. All Rights Reserved</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function convertTemperature() {
+            const inputValue = parseFloat(document.getElementById('inputValue').value);
+            const inputUnit = document.getElementById('inputUnit').value;
+            let result = "";
+
+            if (isNaN(inputValue)) {
+                document.getElementById('output').innerText = "Masukkan nilai yang valid!";
+                return;
+            }
+
+            switch (inputUnit) {
+                case 'Celsius':
+                    const fahrenheitFromCelsius = (inputValue * 9/5) + 32;
+                    const kelvinFromCelsius = inputValue + 273.15;
+                    const reamurFromCelsius = inputValue * 4/5;
+                    result = `Celcius ➜ Fahrenheit: (${inputValue} * 9/5) + 32 = ${fahrenheitFromCelsius.toFixed(2)}°F
+                    \nCelcius ➜ Kelvin: (${inputValue} + 273.15) = ${kelvinFromCelsius.toFixed(2)}°K
+                    \nCelcius ➜ Reamur: (${inputValue} * 4/5) = ${reamurFromCelsius.toFixed(2)}°Ré`;
+                    break;
+
+                case 'Fahrenheit':
+                    const celsiusFromFahrenheit = (inputValue - 32) * 5/9;
+                    const kelvinFromFahrenheit = 5/9 * (inputValue - 32) + 273.15;
+                    const reamurFromFahrenheit = 4/9 * (inputValue - 32);
+                    result = `Fahrenheit ➜ Celsius: (${inputValue} - 32) * 5/9 = ${celsiusFromFahrenheit.toFixed(2)}°C
+                    \nFahrenheit ➜ Kelvin: 5/9 * (${inputValue} - 32) + 273.15 = ${kelvinFromFahrenheit.toFixed(2)}°K
+                    \nFahrenheit ➜ Reamur: 4/9 * (${inputValue} - 32) = ${reamurFromFahrenheit.toFixed(2)}°Ré`;
+                    break;
+
+                case 'Kelvin':
+                    const celsiusFromKelvin = inputValue - 273.15;
+                    const fahrenheitFromKelvin = (inputValue - 273.15) * 9/5 + 32;
+                    const reamurFromKelvin = 4/5 * (inputValue - 273.15);
+                    result = `Kelvin ➜ Celsius: ${inputValue} - 273.15 = ${celsiusFromKelvin.toFixed(2)}°C
+                    \nKelvin ➜ Fahrenheit: (${inputValue} - 273.15) * 9/5 + 32 = ${fahrenheitFromKelvin.toFixed(2)}°F
+                    \nKelvin ➜ Reamur: 4/5 * (${inputValue} - 273.15) = ${reamurFromKelvin.toFixed(2)}°Ré`;
+                    break;
+
+                case 'Reamur':
+                    const celsiusFromReamur = 5/4 * inputValue;
+                    const fahrenheitFromReamur = (9/4 * inputValue) + 32;
+                    const kelvinFromReamur = (5/4 * inputValue) + 273.15;
+                    result = `Reamur ➜ Celsius: 5/4 * ${inputValue} = ${celsiusFromReamur.toFixed(2)}°C
+                    \nReamur ➜ Fahrenheit: (9/4 * ${inputValue}) + 32 = ${fahrenheitFromReamur.toFixed(2)}°F
+                    \nReamur ➜ Kelvin: (5/4 * ${inputValue}) + 273.15 = ${kelvinFromReamur.toFixed(2)}°K`;
+                    break;
+
+                default:
+                    break;
+            }
+
+            document.getElementById('output').innerText = result;
+        }
+
+        $(document).ready(function() {
+            // Close all submenus when a main dropdown is clicked
+            $('.nav-item.dropdown > .nav-link').on('click', function() {
+                $('.dropdown-submenu .dropdown-menu').hide();
+            });
+
+            $('.dropdown-submenu a.dropdown-toggle').on('click', function(e) {
+                var $submenu = $(this).next('.dropdown-menu');
+
+                // Close other submenus
+                $('.dropdown-submenu .dropdown-menu').not($submenu).hide();
+
+                // Toggle the clicked submenu
+                $submenu.toggle();
+
+                e.stopPropagation();
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
